@@ -1,0 +1,10 @@
+.portrait {
+  display: block;
+  max-width: 200px;
+  width: 60%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FFCC80; /* Material Orange 200 */
+  margin: 20px auto;
+  padding: 0px;
+}

@@ -1,0 +1,9 @@
+{
+  "intro": "geboren am TT.MM.JJJJ in XY, ledig, X Kinder",
+  "address": "Musterstr. 1, 12345 Musterstadt",
+  "addressUrl": "https://goo.gl/maps/26ZJ9MJWZ2y",
+  "web": "example.com",
+  "webUrl": "http://example.com",
+  "email": "info@example.com",
+  "phone": "+4912345678910"
+}

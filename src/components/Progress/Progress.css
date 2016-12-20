@@ -1,0 +1,30 @@
+.progress-container {
+  clear: both;
+  height: 12px;
+  line-height: 12px;
+  margin-bottom: 10px;
+}
+
+.progress-label {
+  font-size: 12px;
+}
+
+.progress-bar {
+  float: right;
+  border: 2px solid #90CAF9; /* Material Light Blue 200 */
+  border-radius: 20px;
+  height: 100%;
+  width: 60%;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: #90CAF9; /* Material Light Blue 200 */
+  border-radius: 20px;
+  border: none;
+  box-sizing: border-box;
+  transition: all 1s;
+}

@@ -1,0 +1,8 @@
+.title {
+  border-bottom: 1px solid #757575; /* Material Blue Grey 400 */
+  padding-bottom: 5px;
+}
+
+.title-icon {
+  float: right;
+}

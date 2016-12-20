@@ -1,0 +1,11 @@
+.info-entry {
+  height: 16px;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+
+.info-entry-icon {
+  color: #FFCC80; /* Material Orange 200 */
+  font-size: 16px;
+  margin-bottom: 2px;
+}

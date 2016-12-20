@@ -1,0 +1,12 @@
+.tag-container {
+  margin: 5px 0px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: #B3E5FC; /* Material Light Blue 100 */
+  box-shadow: 1px 2px 0px #90CAF9; /* Material Light Blue 200 */
+}

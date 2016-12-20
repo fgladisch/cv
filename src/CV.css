@@ -1,0 +1,43 @@
+.container {
+  min-width: 320px;
+  max-width: 760px;
+  padding: 10px;
+  margin: auto;
+}
+
+.panel {
+  background-color: #424242; /* Material Grey 800 */
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, .5);
+  margin-bottom: 20px;
+}
+
+.panel a:hover {
+  color: #90CAF9; /* Material Light Blue 200 */
+}
+
+.info-general {
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+  max-width: 80%;
+  color: #BDBDBD; /* Material Blue Grey 400 */
+}
+
+@media screen and (min-width: 760px), print {
+
+  .panel {
+    float: left;
+    width: 40%;
+    margin-bottom: 0px;
+  }
+
+  .content {
+    float: right;
+    width: 60%;
+    padding-left: 20px;
+  }
+
+}

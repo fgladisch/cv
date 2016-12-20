@@ -1,0 +1,31 @@
+.stage {
+  margin: 20px 0px;
+  page-break-inside: avoid;
+}
+
+.stage-primary {
+  padding-left: 10px;
+  border-left: 3px solid #757575; /* Material Blue Grey 600 */
+}
+
+.stage-secondary {
+  position: relative;
+  font-size: 12px;
+  padding-left: 10px;
+  border-left: 3px solid #BDBDBD; /* Material Blue Grey 400 */
+}
+
+.stage-text-muted {
+  font-size: 12px;
+  font-weight: 700;
+  color: #78909C; /* Material Blue Grey 400 */
+}
+
+.stage-text-primary {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.stage-text-secondary {
+  font-style: italic;
+}
