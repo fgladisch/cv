@@ -1,5 +1,9 @@
 {
-  "intro": "geboren am TT.MM.JJJJ in XY, ledig, X Kinder",
+  "birthday": {
+    "day": "01",
+    "month": "01",
+    "year": "1970"
+  },
   "address": "Musterstr. 1, 12345 Musterstadt",
   "addressUrl": "https://goo.gl/maps/26ZJ9MJWZ2y",
   "web": "example.com",

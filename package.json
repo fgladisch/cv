@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "./",
   "devDependencies": {
-    "react-scripts": "0.8.4"
+    "react-scripts": "0.9.5"
   },
   "dependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react": "15.4.2",
+    "react-dom": "15.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

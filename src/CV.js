@@ -18,7 +18,14 @@ import SignatureImage from './images/signature.png'
 // Personal info (rename _personal.json)
 import personalInfo from './personal.json'
 
+import i18n from './i18nService'
+
 export default class CV extends React.Component {
+
+  constructor() {
+    super()
+    this.i18n = new i18n();
+  }
 
   render() {
     return (
@@ -28,13 +35,15 @@ export default class CV extends React.Component {
 
           <Portrait image={PortraitImage} />
 
-          <h1 className="text-center">Felix Gladisch</h1>
+          <h1 className="text-center">Felix A. Gladisch</h1>
 
-          <p className="text-center text-info">Full Stack Web-Entwickler</p>
+          <p className="text-center text-info">{this.i18n.translation.JOB_TITLE}</p>
 
-          <p className="info-general">{personalInfo.intro}</p>
+          <p className="info-general">
+            {`${this.i18n.translation.BORN_ON} ${this.i18n.formatDate(personalInfo.birthday)} ${this.i18n.translation.INTRO}`}
+          </p>
 
-          <Title icon="person">Kontakt</Title>
+          <Title icon="person">{this.i18n.translation.CONTACT}</Title>
 
           <InfoEntry icon="place">
             <a href={personalInfo.addressUrl}>{personalInfo.address}</a>
@@ -50,23 +59,23 @@ export default class CV extends React.Component {
 
           <InfoEntry icon="phone">{personalInfo.phone}</InfoEntry>
 
-          <Title icon="code">Fähigkeiten</Title>
+          <Title icon="code">{this.i18n.translation.SKILLS}</Title>
 
           <Progress percent="90">JavaScript</Progress>
           <Progress percent="90">HTML5/CSS3</Progress>
-          <Progress percent="85">AngularJS</Progress>
+          <Progress percent="85">Angular</Progress>
           <Progress percent="80">Node.js</Progress>
-          <Progress percent="75">Angular 2</Progress>
           <Progress percent="70">Java</Progress>
 
-          <div>Sonstige:</div>
-
           <p className="small">
+            ...
             TypeScript,
             React,
+            Redux,
             Bootstrap,
             Sass,
             jQuery,
+            Express,
             Sequelize,
             webpack,
             gulp.js,
@@ -82,14 +91,14 @@ export default class CV extends React.Component {
             Git Workflow
           </p>
 
-          <Title icon="language">Sprachkenntnisse</Title>
+          <Title icon="language">{this.i18n.translation.LANGUAGES}</Title>
 
-          <Progress percent="100">Deutsch</Progress>
-          <Progress percent="80">Englisch</Progress>
+          <Progress percent="100">{this.i18n.translation.GERMAN}</Progress>
+          <Progress percent="80">{this.i18n.translation.ENGLISH}</Progress>
 
-          <Title icon="directions_bike">Freizeit</Title>
+          <Title icon="directions_bike">{this.i18n.translation.LEISURE}</Title>
 
-          <div>Fitness / Sport</div>
+          <div>Fitness</div>
           <div>Skateboarding</div>
           <div>Snowboarding</div>
 
@@ -97,50 +106,52 @@ export default class CV extends React.Component {
 
         <div className="content">
 
-          <Title icon="work">Beruflicher Werdegang</Title>
+          <Title icon="work">{this.i18n.translation.EMPLOYMENT_HISTORY}</Title>
 
           <Stage
             isPrimary
-            year="04/2015 - heute"
-            name="Full Stack Web-Entwickler"
-            description="IN-telegence GmbH, Köln">
+            year={`04/2015 - ${this.i18n.translation.TODAY}`}
+            name={this.i18n.translation.JOB_TITLE}
+            description={`IN-telegence GmbH, ${this.i18n.translation.COLOGNE}`}>
 
             <Stage
               year="2016"
               name="telegra"
-              description="Webplattform bestehend aus Microservices und Webanwendungen"
-              tags={['TypeScript', 'Angular 2', 'Bootstrap 4', 'Sass', 'Karma', 'Jasmine', 'Node.js', 'Express', 'Mocha', 'Sequelize', 'PostgreSQL', 'webpack']} />
+              description={this.i18n.translation.PROJECT_TELEGRA_DESC}
+              tags={['TypeScript', 'Angular 2', 'Bootstrap 4', 'Sass', 'Karma', 'Jasmine',
+                'Node.js', 'Express', 'Mocha', 'Sequelize', 'PostgreSQL', 'webpack']} />
 
             <Stage
               year="2016"
               name="ACD Salesforce Adapter"
-              description="OpenCTI Softphone für Salesforce"
+              description={this.i18n.translation.PROJECT_SALESFORCE_DESC}
               tags={['AngularJS', 'Bootstrap 3', 'Karma', 'Jasmine', 'gulp.js']} />
 
             <Stage
               year="2015/2016"
               name="ACD Wallboard V2"
-              description="Webanwendung zur Verwaltung von Telefonaten"
+              description={this.i18n.translation.PROJECT_WALLBOARD_DESC}
               tags={['AngularJS', 'jQuery', 'Highcharts', 'Karma', 'Jasmine', 'gulp.js']} />
 
             <Stage
               year="2015"
               name="Concierge"
-              description="Webbasierte Statistikanwendung für Callcenter"
-              tags={['jQuery', 'jQuery UI', 'jQuery Mobile', 'Bootstrap 3', 'mustache.js', 'browserify', 'gulp.js']} />
+              description={this.i18n.translation.PROJECT_CONCIERGE_DESC}
+              tags={['jQuery', 'jQuery UI', 'jQuery Mobile', 'Bootstrap 3', 'mustache.js',
+                'browserify', 'gulp.js']} />
 
           </Stage>
 
           <Stage
             isPrimary
             year="04/2014 - 12/2014"
-            name="Softwareentwickler (Werkstudent)"
-            description="IN-telegence GmbH, Köln">
+            name={this.i18n.translation.DEVELOPER_INTERNSHIP}
+            description={`IN-telegence GmbH, ${this.i18n.translation.COLOGNE}`}>
 
             <Stage
               year="2015"
-              name="Concierge"
-              description="Webbasierte Statistikanwendung für Callcenter"
+              name="ACD Wallboard"
+              description={this.i18n.translation.PROJECT_WALLBOARD_DESC}
               tags={['Java 8', 'PrimeFaces', 'jQuery', 'Google Charts', 'Wildfly']} />
 
           </Stage>
@@ -148,30 +159,30 @@ export default class CV extends React.Component {
           <Stage
             isPrimary
             year="01/2011 - 09/2011"
-            name="IT-Systemadministrator (Praktikum)"
-            description="IN-telegence GmbH, Köln" />
+            name={this.i18n.translation.IT_SYSTEM_ADMINISTRATOR_INTERNSHIP}
+            description={`IN-telegence GmbH, ${this.i18n.translation.COLOGNE}`} />
 
-          <Title icon="school">Bildungsweg</Title>
+          <Title icon="school">{this.i18n.translation.EDUCATION}</Title>
 
           <Stage
             isPrimary
             year="09/2011 - 03/2015"
-            name="Medien- und Kommunikationsinformatik, B.Sc."
-            description="Hochschule Rhein-Waal, Kamp-Lintfort" />
+            name={this.i18n.translation.MEDIA_COMMUNICATION_AND_COMPUTER_SCIENCE_BSC}
+            description={`${this.i18n.translation.RHINE_WAAL_UNIVERSITY_OF_APPLIED_SCIENCES}, Kamp-Lintfort`} />
 
           <Stage
             isPrimary
             year="08/2009 - 07/2010"
-            name="Fachhochschulreife (Wirtschaft und Verwaltung)"
-            description="Mercator Berufskolleg, Moers" />
+            name={this.i18n.translation.ADVANCED_TECHNICAL_COLLEGE_ENTRANCE_QUALIFICATION}
+            description={`${this.i18n.translation.MERCATOR_VOCATIONAL_COLLEGE}, Moers`} />
 
           <Stage
             isPrimary
             year="08/2006 - 07/2009"
-            name="Ausbildung zum Informatikkaufmann"
+            name={this.i18n.translation.APPRENTICESHIP_AS_IT_MANAGEMENT_ASSISTANT}
             description="RAG Deutsche Steinkohle AG, Herne" />
 
-          <Signature image={SignatureImage} city="Duisburg" />
+          <Signature i18n={this.i18n} image={SignatureImage} city="Duisburg" />
 
         </div>
 

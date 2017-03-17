@@ -14,6 +14,10 @@
   margin-bottom: 20px;
 }
 
+.panel a {
+  cursor: pointer;
+}
+
 .panel a:hover {
   color: #90CAF9; /* Material Light Blue 200 */
 }

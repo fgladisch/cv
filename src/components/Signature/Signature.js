@@ -9,7 +9,11 @@ export default class Signature extends React.Component {
     let day = now.getDate()
     let month = now.getMonth() + 1
     let year = now.getFullYear()
-    return `${day}.${month}.${year}`
+    return this.props.i18n.formatDate({
+      day: day > 9 ? day.toString() : '0' + day,
+      month: month > 9 ? month.toString() : '0' + month,
+      year: year.toString()
+    })
   }
 
   render() {

@@ -19,11 +19,13 @@
   font-size: 12px;
   font-weight: 700;
   color: #78909C; /* Material Blue Grey 400 */
+  margin-bottom: 2px;
 }
 
 .stage-text-primary {
   font-size: 16px;
   font-weight: 400;
+  margin-bottom: 4px;
 }
 
 .stage-text-secondary {
