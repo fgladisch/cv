@@ -1,33 +1,33 @@
-.stage {
+.Stage {
   margin: 20px 0px;
   page-break-inside: avoid;
 }
 
-.stage-primary {
+.Stage-primary {
   padding-left: 10px;
   border-left: 3px solid #757575; /* Material Blue Grey 600 */
 }
 
-.stage-secondary {
+.Stage-secondary {
   position: relative;
   font-size: 12px;
   padding-left: 10px;
   border-left: 3px solid #BDBDBD; /* Material Blue Grey 400 */
 }
 
-.stage-text-muted {
+.Stage-text-muted {
   font-size: 12px;
   font-weight: 700;
   color: #78909C; /* Material Blue Grey 400 */
   margin-bottom: 2px;
 }
 
-.stage-text-primary {
+.Stage-text-primary {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 4px;
 }
 
-.stage-text-secondary {
+.Stage-text-secondary {
   font-style: italic;
 }

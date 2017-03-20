@@ -1,10 +1,11 @@
 import de from './i18n/de.json'
 import en from './i18n/en.json'
 
+import * as i18nActions from './actions/i18nActions'
+
 export default class i18nService {
 
   currentLanguage
-  translation
   translations = { de, en }
 
   constructor() {
@@ -22,7 +23,7 @@ export default class i18nService {
 
   setLanguage(key) {
     this.currentLanguage = key
-    this.translation = this.translations[key]
+    i18nActions.updateTranslations(this.translations[key])
   }
 
   formatDate(date) {

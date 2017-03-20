@@ -6,7 +6,7 @@ export default class Portrait extends React.Component {
 
   render() {
     return (
-      <img role="presentation" className="portrait" src={this.props.image} />
+      <img role="presentation" alt="Portrait" className="Portrait" src={this.props.image} />
     )
   }
 

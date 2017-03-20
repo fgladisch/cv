@@ -17,10 +17,10 @@ export default class Progress extends React.Component {
 
   render() {
     return (
-      <div className="progress-container">
-        <span className="progress-label">{this.props.children}</span>
-        <div className="progress-bar">
-          <div className="progress" style={this.state.progressStyle}></div>
+      <div className="Progress-container">
+        <span className="Progress-label">{this.props.children}</span>
+        <div className="Progress-bar">
+          <div className="Progress" style={this.state.progressStyle}></div>
         </div>
       </div>
     )

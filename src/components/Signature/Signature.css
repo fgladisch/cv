@@ -1,15 +1,15 @@
-.signature-container {
+.Signature-container {
   width: 250px;
   padding-left: 20px;
   margin: 20px 0px;
 }
 
-.signature {
+.Signature {
   display: block;
   width: 100%;
 }
 
-.signature-text {
+.Signature-text {
   font-weight: 700;
   font-size: 12px;
   padding-left: 10px;

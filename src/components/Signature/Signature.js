@@ -18,9 +18,9 @@ export default class Signature extends React.Component {
 
   render() {
     return (
-      <div className="signature-container">
-        <img className="signature" role="presentation" src={this.props.image} />
-        <div className="signature-text">{this.props.city}, {this.getDate()}</div>
+      <div className="Signature-container">
+        <img className="Signature" alt="Signature" role="presentation" src={this.props.image} />
+        <div className="Signature-text">{this.props.city}, {this.getDate()}</div>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 {
   "JOB_TITLE": "Full Stack Web-Entwickler",
-  "INTRO": ", ledig, keine Kinder",
+  "INTRO_BEGINNING": "Geboren am",
+  "INTRO_END": "in Moers, ledig, keine Kinder",
   "CONTACT": "Kontakt",
   "SKILLS": "Fähigkeiten",
   "LANGUAGES": "Sprachen",
@@ -21,6 +22,5 @@
   "MERCATOR_VOCATIONAL_COLLEGE": "Mercator Berufskolleg",
   "APPRENTICESHIP_AS_IT_MANAGEMENT_ASSISTANT": "Ausbildung zum Informatikkaufmann",
   "COLOGNE": "Köln",
-  "TODAY": "heute",
-  "BORN_ON": "geboren am"
+  "TODAY": "heute"
 }

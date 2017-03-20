@@ -1,15 +1,15 @@
-.progress-container {
+.Progress-container {
   clear: both;
   height: 12px;
   line-height: 12px;
   margin-bottom: 10px;
 }
 
-.progress-label {
+.Progress-label {
   font-size: 12px;
 }
 
-.progress-bar {
+.Progress-bar {
   float: right;
   border: 2px solid #90CAF9; /* Material Light Blue 200 */
   border-radius: 20px;
@@ -19,7 +19,7 @@
   padding: 2px;
 }
 
-.progress {
+.Progress {
   height: 100%;
   width: 0%;
   background-color: #90CAF9; /* Material Light Blue 200 */
