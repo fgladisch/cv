@@ -7,7 +7,3 @@ export const store = createStore(reducers, {
     translations: {}
   }
 })
-
-store.subscribe(() => {
-  console.log('store changed', store.getState())
-})

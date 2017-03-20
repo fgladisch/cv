@@ -6,6 +6,10 @@ import * as i18nActions from './actions/i18nActions'
 export default class i18nService {
 
   currentLanguage
+  languages = [
+    { title: 'Deutsch', key: 'de' },
+    { title: 'English', key: 'en' }
+  ]
   translations = { de, en }
 
   constructor() {
@@ -31,7 +35,7 @@ export default class i18nService {
       case 'de':
         return `${date.day}.${date.month}.${date.year}`
       default:
-        return `${date.year}-${date.month}-${date.day}`
+        return `${date.day}/${date.month}/${date.year}`
     }
   }
 

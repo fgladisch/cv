@@ -11,6 +11,7 @@ import Portrait from './components/Portrait/Portrait'
 import Title from './components/Title/Title'
 import InfoEntry from './components/InfoEntry/InfoEntry'
 import Signature from './components/Signature/Signature'
+import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher'
 
 // Images
 import PortraitImage from './images/portrait.jpg'
@@ -31,6 +32,16 @@ class CVComponent extends React.Component {
   render() {
     return (
       <div className="container">
+
+        <div className="header">
+
+          <a className="link" href="https://github.com/fgladisch/cv">
+            View source on GitHub
+          </a>
+
+          <LanguageSwitcher i18n={this.i18n}></LanguageSwitcher>
+
+        </div>
 
         <div className="panel">
 
@@ -116,7 +127,7 @@ class CVComponent extends React.Component {
             description={`IN-telegence GmbH, ${this.props.translations.COLOGNE}`}>
 
             <Stage
-              year="2016"
+              year="2016 - 2017"
               name="telegra"
               description={this.props.translations.PROJECT_TELEGRA_DESC}
               tags={['TypeScript', 'Angular 2', 'Bootstrap 4', 'Sass', 'Karma', 'Jasmine',
@@ -129,7 +140,7 @@ class CVComponent extends React.Component {
               tags={['AngularJS', 'Bootstrap 3', 'Karma', 'Jasmine', 'gulp.js']} />
 
             <Stage
-              year="2015/2016"
+              year="2015 - 2016"
               name="ACD Wallboard V2"
               description={this.props.translations.PROJECT_WALLBOARD_DESC}
               tags={['AngularJS', 'jQuery', 'Highcharts', 'Karma', 'Jasmine', 'gulp.js']} />
