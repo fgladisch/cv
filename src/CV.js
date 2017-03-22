@@ -94,13 +94,13 @@ class CVComponent extends React.Component {
             Grunt,
             Jasmine,
             Mocha,
+            Chai
             Karma,
             Java EE,
             Spring,
             Linux,
             SQL,
-            Git,
-            Git Workflow
+            Git
           </p>
 
           <Title icon="language">{this.props.translations.LANGUAGES}</Title>
@@ -131,7 +131,7 @@ class CVComponent extends React.Component {
               name="telegra"
               description={this.props.translations.PROJECT_TELEGRA_DESC}
               tags={['TypeScript', 'Angular 2', 'Bootstrap 4', 'Sass', 'Karma', 'Jasmine',
-                'Node.js', 'Express', 'Mocha', 'Sequelize', 'PostgreSQL', 'webpack']} />
+                'Node.js', 'Express', 'Mocha', 'Chai', 'Sequelize', 'PostgreSQL', 'webpack']} />
 
             <Stage
               year="2016"
