@@ -1,5 +1,8 @@
 import { store } from '../store'
 
-export function updateTranslations(translations) {
-  store.dispatch({ type: 'UPDATE', payload: translations })
+export function changeLanguage({ language, translations }) {
+  store.dispatch({
+    type: 'CHANGE_LANGUAGE',
+    payload: { language, translations }
+  })
 }

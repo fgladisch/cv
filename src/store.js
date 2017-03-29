@@ -4,6 +4,7 @@ import { reducers } from './reducers'
 
 export const store = createStore(reducers, {
   i18n: {
+    language: 'en',
     translations: {}
   }
 })

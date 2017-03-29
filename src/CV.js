@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 // Styles
 import './CV.css'
 
+import Util from './UtilService'
+
 // Components
 import Stage from './components/Stage/Stage'
 import Progress from './components/Progress/Progress'
@@ -11,7 +13,7 @@ import Portrait from './components/Portrait/Portrait'
 import Title from './components/Title/Title'
 import InfoEntry from './components/InfoEntry/InfoEntry'
 import Signature from './components/Signature/Signature'
-import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher'
+import { LanguageSwitcher } from './components/LanguageSwitcher/LanguageSwitcher'
 
 // Images
 import PortraitImage from './images/portrait.jpg'
@@ -20,14 +22,7 @@ import SignatureImage from './images/signature.png'
 // Personal info (rename _personal.json)
 import personalInfo from './personal.json'
 
-import i18nService from './i18nService'
-
 class CVComponent extends React.Component {
-
-  constructor() {
-    super()
-    this.i18n = new i18nService();
-  }
 
   render() {
     return (
@@ -39,7 +34,7 @@ class CVComponent extends React.Component {
             View source on GitHub
           </a>
 
-          <LanguageSwitcher i18n={this.i18n}></LanguageSwitcher>
+          <LanguageSwitcher></LanguageSwitcher>
 
         </div>
 
@@ -52,7 +47,7 @@ class CVComponent extends React.Component {
           <p className="text-center text-info">{this.props.translations.JOB_TITLE}</p>
 
           <p className="info-general">
-            {`${this.props.translations.INTRO_BEGINNING} ${this.i18n.formatDate(personalInfo.birthday)} ${this.props.translations.INTRO_END}`}
+            {`${this.props.translations.INTRO_BEGINNING} ${Util.formatDate(personalInfo.birthday)} ${this.props.translations.INTRO_END}`}
           </p>
 
           <Title icon="person">{this.props.translations.CONTACT}</Title>
@@ -84,9 +79,9 @@ class CVComponent extends React.Component {
             TypeScript,
             React,
             Redux,
+            yarn,
             Bootstrap,
             Sass,
-            jQuery,
             Express,
             Sequelize,
             webpack,
@@ -94,8 +89,9 @@ class CVComponent extends React.Component {
             Grunt,
             Jasmine,
             Mocha,
-            Chai
+            Chai,
             Karma,
+            jQuery,
             Java EE,
             Spring,
             Linux,
@@ -130,8 +126,8 @@ class CVComponent extends React.Component {
               year="2016 - 2017"
               name="telegra"
               description={this.props.translations.PROJECT_TELEGRA_DESC}
-              tags={['TypeScript', 'Angular 2', 'Bootstrap 4', 'Sass', 'Karma', 'Jasmine',
-                'Node.js', 'Express', 'Mocha', 'Chai', 'Sequelize', 'PostgreSQL', 'webpack']} />
+              tags={['TypeScript', 'Angular 2', 'Bootstrap 4', 'Sass', 'Karma', 'Jasmine', 'Node.js',
+                'Express', 'Mocha', 'Chai', 'Sequelize', 'PostgreSQL', 'webpack', 'yarn']} />
 
             <Stage
               year="2016"
@@ -194,7 +190,7 @@ class CVComponent extends React.Component {
             name={this.props.translations.APPRENTICESHIP_AS_IT_MANAGEMENT_ASSISTANT}
             description="RAG Deutsche Steinkohle AG, Herne" />
 
-          <Signature i18n={this.i18n} image={SignatureImage} city="Duisburg" />
+          <Signature image={SignatureImage} city="Duisburg" />
 
         </div>
 
@@ -204,7 +200,7 @@ class CVComponent extends React.Component {
 
 }
 
-export const CV = connect((store) => {
+export const CV = connect(store => {
   return {
     translations: store.i18n.translations
   }
